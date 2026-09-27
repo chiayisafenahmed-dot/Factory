@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steel & Rebar Factory | کارگەی بەرهەمهێنانی شیش و ڕیبەر</title>
+    <title>TITAN STEEL | Global Leader in Rebar & Steel Manufacturing</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,169 +16,268 @@
     
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-[#070b14] text-slate-100 selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- ١. مێنوی سەرەوە (Navbar - هاوشێوەی نموونەکەت) -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <!-- لۆگۆی کارگە -->
-            <a href="#" class="text-2xl font-extrabold tracking-wider flex items-center gap-2">
-                <i class="fa-solid fa-industry text-amber-500"></i>
-                <span>TITAN<span class="text-amber-500">STEEL</span></span>
+    <!-- ١. مێنوی سەرەوە (Navbar Pro) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#070b14]/80 border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- لۆگۆ -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-industry text-slate-950 text-xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-wider text-white">TITAN<span class="text-amber-500">STEEL</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Industrial Group</span>
+                </div>
             </a>
 
-            <!-- لینکەکان -->
+            <!-- مێنوی ناوەند -->
             <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
                 <a href="#home" class="hover:text-amber-400 transition">Home</a>
                 <a href="#about" class="hover:text-amber-400 transition">About Us</a>
-                <a href="#investors" class="hover:text-amber-400 transition">Investors</a>
-                <a href="#products" class="hover:text-amber-400 transition">Products</a>
-                <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
-                <a href="#sustainability" class="hover:text-amber-400 transition">Sustainability</a>
+                <a href="#products" class="hover:text-amber-400 transition">Products & Rebar</a>
+                <a href="#calculator" class="text-amber-400 flex items-center gap-1.5"><i class="fa-solid fa-calculator text-xs"></i> Rebar Calculator</a>
+                <a href="#gallery" class="hover:text-amber-400 transition">Plant Gallery</a>
                 <a href="#contact" class="hover:text-amber-400 transition">Contact Us</a>
             </div>
 
-            <!-- دوگمەی گەڕان و کەتەلۆگ -->
+            <!-- دوگمەی دابەزاندنی کەتەلۆگ -->
             <div class="flex items-center gap-4">
-                <button class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-300 hover:border-amber-500 hover:text-amber-400 transition">
-                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
-                </button>
-                <a href="#booklet" class="hidden sm:inline-flex items-center gap-2 border border-slate-600 px-6 py-2.5 rounded-full text-sm font-bold text-white hover:bg-amber-500 hover:border-amber-500 hover:text-slate-950 transition duration-300">
-                    Download Booklet
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 px-7 py-3 rounded-xl text-sm font-bold hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/10">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Download Booklet</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- ٢. بەشی پێشوازی (Hero Section) -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
-        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"></div>
-        <div class="relative max-w-4xl text-center mx-auto z-10">
-            <span class="inline-block py-1.5 px-5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">
-                Leading Steel & Rebar Manufacturing
-            </span>
-            <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6">
-                Building the Future with <span class="text-amber-500">Unmatched Strength</span>
+    <!-- ٢. بەشی پێشوازی (Cinematic Hero Section) -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 px-6 overflow-hidden bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#070b14] via-[#070b14]/80 to-transparent"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center z-10 py-20">
+            <div class="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-8 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                ISO 9001 Certified Steel & Rebar Manufacturer
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
+                Engineering Strength for <br>
+                <span class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200 bg-clip-text text-transparent">
+                    Global Mega Structures
+                </span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                کارگەی پێشکەوتووی بەرهەمهێنانی شیش و ڕیبەری پۆڵایی بە بەرزترین ستانداردە جیهانییەکان بۆ پڕۆژە ئەندازیارییە گەورەکان.
+            
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                کارگەی پیشەسازی تایتان پۆڵا، بەرهەمهێنەری پێشەنگی شیش و ڕیبەری ئەندازیاری بە کوالێتی کۆنترۆڵکراوی جیهانی بۆ پڕۆژە نیشتمانی و مەزنەکان.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#products" class="bg-amber-500 text-slate-950 hover:bg-amber-400 px-8 py-4 rounded-full font-bold transition shadow-lg shadow-amber-500/20">
-                    Explore Products
+            
+            <div class="flex flex-wrap justify-center gap-5">
+                <a href="#products" class="bg-amber-500 text-slate-950 hover:bg-amber-400 px-9 py-4 rounded-2xl font-bold transition shadow-xl shadow-amber-500/20 flex items-center gap-3">
+                    <span>Explore Rebar Grades</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
                 </a>
-                <a href="#contact" class="bg-slate-900/80 border border-slate-700 hover:border-amber-500 text-white px-8 py-4 rounded-full font-bold transition">
-                    Request a Quote
+                <a href="#calculator" class="glass-card hover:border-amber-500/50 text-white px-9 py-4 rounded-2xl font-bold transition flex items-center gap-3">
+                    <i class="fa-solid fa-calculator text-amber-500"></i>
+                    <span>Calculate Rebar Weight</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ٣. بەشی دەربارەی کارگە (About Us) -->
-    <section id="about" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- ٣. ئاماری زیندوو (Live Industrial Stats) -->
+    <section class="border-y border-slate-800/80 bg-slate-900/30 backdrop-blur-md py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-4">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-amber-500 mb-2">600,000+</h3>
+                <p class="text-slate-400 text-sm font-medium">Metric Tons Annual Output</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-amber-500 mb-2">32mm</h3>
+                <p class="text-slate-400 text-sm font-medium">Max Rebar Diameter Range</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-amber-500 mb-2">100%</h3>
+                <p class="text-slate-400 text-sm font-medium">Laboratory Stress Tested</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-amber-500 mb-2">24/7</h3>
+                <p class="text-slate-400 text-sm font-medium">Plant Operations & Supply</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ٤. بەشی بەرهەمەکان و جۆرەکانی شیش (Products & Rebar Grades) -->
+    <section id="products" class="py-28 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
-                <span class="text-amber-500 font-bold uppercase tracking-wider text-sm">About Our Plant</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold mt-2 mb-6 leading-tight">شۆڕشێک لە پیشەسازی بەرهەمهێنانی پۆڵا و شیشدا</h2>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    کارگەکەمان بە پەیڕەوکردنی نوێترین تەکنەلۆژیای جیهانی لە بوارەی توانەوە و دروستکردنی شیشی ئەندازیاری (Rebar)، توانیویەتی پێداویستی بازاڕی ناوخۆیی و هەرێمی بە کوالێتییەکی بێوێنە پڕبکاتەوە.
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">High Grade Steel</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-3">جۆرە سەرەکییەکانی شیش و ڕیبەر</h2>
+            </div>
+            <p class="text-slate-400 max-w-md mt-4 md:mt-0">
+                بەرهەمەکانمان بە شێوازێک دیزاین کراون کە بەرگەی بەرزترین پەستانی میکانیکی و لەرزین بگرن بەپێی ستانداردی ASTM A615.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- کارتی ١ -->
+            <div class="glass-card rounded-3xl p-8 hover:border-amber-500/50 transition duration-300 group">
+                <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl mb-8 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold">Grade 60 Deformed Rebar</h3>
+                    <span class="text-xs bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full font-bold">Most Popular</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    شیشی لوولکراوی پێشکەوتوو تایبەت بۆ بەستنی کۆنکرێت و پڕۆژە بیناسازییە گەورەکان بە هێزی کشانی زۆر بەرز.
                 </p>
-                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+                <ul class="space-y-2 text-sm text-slate-300 mb-8 border-t border-slate-800/80 pt-4">
+                    <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> قەبارە: 10mm بۆ 32mm</li>
+                    <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> هێزی شکست: 60,000 psi</li>
+                </ul>
+                <a href="#contact" class="inline-flex items-center gap-2 text-amber-400 font-bold text-sm hover:text-amber-300">
+                    <span>Request Specification Sheet</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- کارتی ٢ -->
+            <div class="glass-card rounded-3xl p-8 hover:border-amber-500/50 transition duration-300 group">
+                <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl mb-8 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                    <i class="fa-solid fa-shield-virus"></i>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold">Seismic Resistant Rebar</h3>
+                    <span class="text-xs bg-red-500/10 text-red-400 px-3 py-1 rounded-full font-bold">High Ductility</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    تایبەتمەندە بە نەرمی و توانای گۆڕانی شێوە لە کاتی لەرزین و زەمینلەرزەدا بێ ئەوەی بشکێت.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-300 mb-8 border-t border-slate-800/80 pt-4">
+                    <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> پارێزراو بۆ ناوچە بوومەلەرزەوییەکان</li>
+                    <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> کوالێتی ئەوروپی</li>
+                </ul>
+                <a href="#contact" class="inline-flex items-center gap-2 text-amber-400 font-bold text-sm hover:text-amber-300">
+                    <span>Request Specification Sheet</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- کارتی ٣ -->
+            <div class="glass-card rounded-3xl p-8 hover:border-amber-500/50 transition duration-300 group">
+                <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl mb-8 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                    <i class="fa-solid fa-cubes"></i>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold">Industrial Steel Billets</h3>
+                    <span class="text-xs bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">Raw Material</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    بلێتی پۆڵایی خاو بە پێوانەی ستاندارد (125x125mm و 150x150mm) بۆ کارگەکانی تری گۆڕانکاری.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-300 mb-8 border-t border-slate-800/80 pt-4">
+                    <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> پاکی ماددە: 99.2%</li>
+                    <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> درێژی: 12 مەتر</li>
+                </ul>
+                <a href="#contact" class="inline-flex items-center gap-2 text-amber-400 font-bold text-sm hover:text-amber-300">
+                    <span>Request Specification Sheet</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ٥. هەژمارکەری کارلێککاری کێشی شیش (Interactive Rebar Calculator Pro) -->
+    <section id="calculator" class="py-28 bg-slate-900/40 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">Engineering Tool</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4">هەژمارکەری کێشی شیش (Rebar Weight Calculator)</h2>
+                <p class="text-slate-400">بۆ ئەندازیاران و کڕیاران: کێشی خەمڵێنراوی بڕی شیش بە کیلۆگرام بزانە</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-8 md:p-12 border border-slate-700/60 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
                     <div>
-                        <h4 class="text-3xl font-extrabold text-amber-500">500k+</h4>
-                        <p class="text-sm text-slate-400 mt-1">تەن بەرهەمی ساڵانە</p>
+                        <label class="block text-sm font-bold text-slate-300 mb-3">تیرەی شیش (Diameter):</label>
+                        <select id="rebarSize" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500">
+                            <option value="0.617">12 mm (0.617 kg/m)</option>
+                            <option value="1.099">16 mm (1.099 kg/m)</option>
+                            <option value="1.578">20 mm (1.578 kg/m)</option>
+                            <option value="2.466" selected>25 mm (2.466 kg/m)</option>
+                            <option value="3.855">32 mm (3.855 kg/m)</option>
+                        </select>
                     </div>
                     <div>
-                        <h4 class="text-3xl font-extrabold text-amber-500">100%</h4>
-                        <p class="text-sm text-slate-400 mt-1">پشکنینی کوالێتی (Quality Control)</p>
+                        <label class="block text-sm font-bold text-slate-300 mb-3">کۆی درێژی (Total Length in Meters):</label>
+                        <input type="number" id="rebarLength" value="100" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500" placeholder="بۆ نموونە 100 مەتر">
                     </div>
                 </div>
-            </div>
-            <div class="relative">
-                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=800&q=80" alt="Steel Plant" class="w-full h-full object-cover">
+
+                <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs text-slate-400 uppercase tracking-wider">Estimated Total Weight</span>
+                        <div class="text-3xl font-extrabold text-amber-400 mt-1" id="weightResult">246.6 KG</div>
+                    </div>
+                    <button onclick="calculateWeight()" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-3.5 rounded-xl font-bold transition shadow-lg">
+                        Calculate Now
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ٤. بەشی جۆرەکانی ڕیبەر و شیش (Products) -->
-    <section id="products" class="py-24 bg-slate-950 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-amber-500 font-bold uppercase tracking-wider text-sm">Our Products</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-4">جۆرەکانی شیش و ڕیبەری بەرهەمهێنراو</h2>
-                <p class="text-slate-400">بەرهەمی پێشکەوتوو بۆ بەرگەگرتنی بەهێزترین پەستانە ئەندازیارییەکان</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- جۆری ١ -->
-                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-amber-500/50 transition duration-300">
-                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Standard Deformed Rebar</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">شیشی لوولکراوی خێزانی (Grade 60) تایبەت بۆ بەستنی کۆنکرێت و بناغەی باڵەخانە گەورەکان.</p>
-                    <span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full">Sizes: 10mm - 32mm</span>
-                </div>
-
-                <!-- جۆری ٢ -->
-                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-amber-500/50 transition duration-300">
-                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">High-Yield Steel Rebar</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">شیشی بەرگری بەررز دژ بە لەرزین و زەمینلەرزە، بە کوالێتی و نەرمییەکی زانستیی بێوێنە.</p>
-                    <span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full">Earthquake Resistant</span>
-                </div>
-
-                <!-- جۆری ٣ -->
-                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-amber-500/50 transition duration-300">
-                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-cube"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Industrial Steel Billets</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">بلێتی پۆڵایی خاو بۆ کارگە و پێکهاتە پیشەسازییە گەورەکان بە پێوانەی ستاندارد.</p>
-                    <span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full">Custom Lengths</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ٥. بەشی گەلەری (Gallery) -->
-    <section id="gallery" class="py-24 max-w-7xl mx-auto px-6 border-t border-slate-900">
+    <!-- ٦. گەلەری کارگە (Plant Gallery) -->
+    <section id="gallery" class="py-28 max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-amber-500 font-bold uppercase tracking-wider text-sm">Plant Gallery</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-4">وێنەی هێڵی بەرهەمهێنانی کارگە</h2>
+            <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">Visual Tour</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">هێڵی بەرهەمهێنان لە ناو کارگەدا</h2>
+            <p class="text-slate-400">تەکنەلۆژیای پێشکەوتووی توانەوە و لولکردنی پۆڵا بە بێ پچڕان</p>
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="h-72 rounded-2xl overflow-hidden border border-slate-800">
-                <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Factory">
+            <div class="h-80 rounded-3xl overflow-hidden border border-slate-800 group relative">
+                <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Furnace">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                <span class="absolute bottom-6 left-6 font-bold text-lg">Electric Arc Furnace</span>
             </div>
-            <div class="h-72 rounded-2xl overflow-hidden border border-slate-800">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Rebar">
+            <div class="h-80 rounded-3xl overflow-hidden border border-slate-800 group relative">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Rebar production">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                <span class="absolute bottom-6 left-6 font-bold text-lg">Hot Rolling Mill</span>
             </div>
-            <div class="h-72 rounded-2xl overflow-hidden border border-slate-800">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Steel production">
+            <div class="h-80 rounded-3xl overflow-hidden border border-slate-800 group relative">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Quality control">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                <span class="absolute bottom-6 left-6 font-bold text-lg">Quality Assurance Lab</span>
             </div>
         </div>
     </section>
 
-    <!-- ٦. بەشی پەیوەندیکردن (Contact Us) -->
-    <section id="contact" class="py-24 bg-slate-900/40 border-t border-slate-900">
+    <!-- ٧. پەیوەندی و داواکاری (Contact Pro) -->
+    <section id="contact" class="py-28 bg-gradient-to-b from-slate-900/40 to-slate-950 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <span class="text-amber-500 font-bold uppercase tracking-wider text-sm">Get in Touch</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold mt-2 mb-6">داواکاری کڕین و پەیوەندی بە بەشی فرۆشەوە</h2>
-            <p class="text-slate-400 mb-10 max-w-xl mx-auto">بۆ بەدەستهێنانی نرخی ڕۆژ و داواکردنی شیش و ڕیبەر بە کۆ، تیممان ٢٤ کاتژمێر لە ئامادەباشیدایە.</p>
+            <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">Enterprise Sales</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-6">داواکاری بە کۆ و گرێبەستی پرۆژە</h2>
+            <p class="text-slate-400 mb-12 max-w-xl mx-auto">
+                بۆ دابینکردنی پێداویستی شیش و پۆڵا بۆ پڕۆژە نیشتمانییەکان، تیممان ئامادەیە نرخی تایبەت و فەرمی پێشکەش بکات.
+            </p>
             
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="mailto:sales@titansteel.com" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-full font-bold transition inline-flex items-center gap-3">
+                <a href="mailto:sales@titansteel.com" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-9 py-4 rounded-2xl font-bold transition inline-flex items-center gap-3 shadow-lg shadow-amber-500/20">
                     <i class="fa-solid fa-envelope"></i>
                     <span>sales@titansteel.com</span>
                 </a>
-                <a href="tel:+9647500000000" class="bg-slate-900 border border-slate-700 hover:border-amber-500 text-white px-8 py-4 rounded-full font-bold transition inline-flex items-center gap-3">
+                <a href="tel:+9647500000000" class="glass-card hover:border-amber-500 text-white px-9 py-4 rounded-2xl font-bold transition inline-flex items-center gap-3">
                     <i class="fa-solid fa-phone text-amber-500"></i>
                     <span>+964 750 000 0000</span>
                 </a>
@@ -186,10 +285,19 @@
         </div>
     </section>
 
-    <!-- ٧. فووتەر (Footer) -->
-    <footer class="border-t border-slate-900 py-10 text-center text-slate-500 text-sm">
-        <p>All Rights Reserved © 2026 - TITAN STEEL & REBAR FACTORY</p>
+    <!-- فووتەر -->
+    <footer class="border-t border-slate-900 py-12 text-center text-slate-500 text-sm">
+        <p>TITAN STEEL & REBAR MANUFACTURING PLANT © 2026. All Rights Reserved.</p>
     </footer>
 
+    <!-- سکرپتی هەژمارکەری کێشی شیش -->
+    <script>
+        function calculateWeight() {
+            const unitWeight = parseFloat(document.getElementById('rebarSize').value);
+            const length = parseFloat(document.getElementById('rebarLength').value) || 0;
+            const totalWeight = (unitWeight * length).toFixed(2);
+            document.getElementById('weightResult').innerText = totalWeight + " KG";
+        }
+    </script>
 </body>
 </html>
